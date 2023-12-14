@@ -49,7 +49,7 @@ GlobalVariable.score = 0;  // Initially the Score will be Zero
 export const getQuestion = () =>{
 
     disableButton();
-    map = true;  // To enable the map to click the area 
+    GlobalVariable.map = true;  // To enable the map to click the area 
 
     document.getElementById("the-map").style.cursor = "pointer";  //Setting the pointer when hover
 
