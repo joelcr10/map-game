@@ -46,6 +46,9 @@ let answers = new Map([
 GlobalVariable.count = 0;  // Initially Setting the question count to zero
 GlobalVariable.score = 0;  // Initially the Score will be Zero
 
+GlobalVariable.questionNo = parseInt(localStorage.getItem("questionNo"));
+GlobalVariable.username = localStorage.getItem("userName");
+
 export const getQuestion = () =>{
 
     disableButton();
