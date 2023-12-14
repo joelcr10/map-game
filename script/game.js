@@ -46,10 +46,11 @@ let answers = new Map([
 GlobalVariable.count = 0;  // Initially Setting the question count to zero
 GlobalVariable.score = 0;  // Initially the Score will be Zero
 
-
+GlobalVariable.questionNo = parseInt(localStorage.getItem("questionNo"));
+GlobalVariable.username = localStorage.getItem("userName");
 
 export const getQuestion = () =>{
-
+    
     disableButton();
     GlobalVariable.map = true;  // To enable the map to click the area 
 
@@ -63,7 +64,7 @@ export const getQuestion = () =>{
     if(GlobalVariable.count < GlobalVariable.questionNo){
 
         let randomNumber = findRandom();
-        console.log(randomNumber);
+        
         GlobalVariable.currentQuestion = questions.get(randomNumber);
         GlobalVariable.currentAnswer = answers.get(randomNumber);
 

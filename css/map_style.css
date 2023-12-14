@@ -1,46 +1,67 @@
-body {
-    background-color: #f4f4f4;
-  }
-  
-  .card {
-    box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
-    border: none;
-    margin-top: 20px;
-  }
-  
-  .card-title {
-    color:blueviolet !important;
-    font-size: 1.75rem;
-  }
-  
-  .card-text {
-    font-size: 1.25rem;
-  }
-  
-  .map-container {
-    padding: 15px;
-    background: #11111144;
-    border-radius: 0.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .btn-primary {
-    font-weight: bold;
-    padding: 10px 25px;
-    font-size: 1rem;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-  img[usemap] {
-    border: none;
-    height: auto;
-    max-width: 100%;
-    /* width: 100%; */
-    mix-blend-mode: multiply;
-  }
+
+body{
+  background-color: black;
+  color: white;
+  font-family: 'Bebas Neue',
+}
+
+.container{
+  /* background-color: blue; */
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.card-body{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.899);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  min-width: 500px;
+  text-align: center;
+}
+
+#question-prompt{
+  font-size: 30px;
   
+}
+
+#result-prompt{
+  font-size: 30px;
+  min-height: 30px;
+}
+
+#next-question-btn{
+  /* width: 150px; */
+  /* height: 40px; */
+  font-size: 20px;
+  /* border: 1px solid black; */
+  background-color: blue;
+  text-decoration: none;
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  color: rgb(0, 0, 0);
+  margin-top: 20px;
+}
+
+
+#continent-name{
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.527);
+  width: 100%;
+  /* padding-top: 90px; */
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
