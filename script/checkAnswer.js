@@ -11,7 +11,7 @@ export const checkAnswer = (idName) =>{
             document.getElementById("result-prompt").innerText = "Correct";
             document.getElementById("result-prompt").style.color = "green";
 
-            GlobalVariable.correctAnswer = GlobalVariable.correctAnswer+1;
+            GlobalVariable.score = GlobalVariable.score+1;
             
 
         }else{
