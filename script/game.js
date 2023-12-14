@@ -46,6 +46,8 @@ let answers = new Map([
 GlobalVariable.count = 0;  // Initially Setting the question count to zero
 GlobalVariable.score = 0;  // Initially the Score will be Zero
 
+
+
 export const getQuestion = () =>{
 
     disableButton();
@@ -55,16 +57,19 @@ export const getQuestion = () =>{
 
     document.getElementById("result-prompt").innerText = "";      //To clear the result-prompt before showing correct or wrong
 
+    
+
+    console.log(GlobalVariable.count,GlobalVariable.questionNo)
     if(GlobalVariable.count < GlobalVariable.questionNo){
 
         let randomNumber = findRandom();
-
+        console.log(randomNumber);
         GlobalVariable.currentQuestion = questions.get(randomNumber);
         GlobalVariable.currentAnswer = answers.get(randomNumber);
 
         document.getElementById("question-prompt").innerText = GlobalVariable.currentQuestion;
     }
-    GlobalVariable.count = GlobalVariable.count + 1;
+    // GlobalVariable.count = GlobalVariable.count + 1;
 }
 
 
