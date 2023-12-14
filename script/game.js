@@ -46,6 +46,9 @@ let answers = new Map([
 GlobalVariable.count = 0;  // Initially Setting the question count to zero
 GlobalVariable.score = 0;  // Initially the Score will be Zero
 
+GlobalVariable.questionNo = parseInt(localStorage.getItem("questionNo"));
+GlobalVariable.username = localStorage.getItem("userName");
+
 export const getQuestion = () =>{
 
     disableButton();
@@ -54,7 +57,6 @@ export const getQuestion = () =>{
     document.getElementById("the-map").style.cursor = "pointer";  //Setting the pointer when hover
 
     document.getElementById("result-prompt").innerText = "";      //To clear the result-prompt before showing correct or wrong
-    GlobalVariable.questionNo = parseInt(localStorage.getItem("questionNo"));
 
     if(GlobalVariable.count < GlobalVariable.questionNo){
 
