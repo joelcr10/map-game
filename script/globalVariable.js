@@ -9,7 +9,7 @@ class GlobalVariable{
     map = true;
 
     get uniqueRandom(){
-        return this.uniqueRandom;
+        return this.uniqueRandom; 
     }
 
     set uniqueRandom(res){
