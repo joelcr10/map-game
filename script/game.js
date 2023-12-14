@@ -54,6 +54,7 @@ export const getQuestion = () =>{
     document.getElementById("the-map").style.cursor = "pointer";  //Setting the pointer when hover
 
     document.getElementById("result-prompt").innerText = "";      //To clear the result-prompt before showing correct or wrong
+    GlobalVariable.questionNo = parseInt(localStorage.getItem("questionNo"));
 
     if(GlobalVariable.count < GlobalVariable.questionNo){
 
