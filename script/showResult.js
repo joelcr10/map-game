@@ -2,12 +2,14 @@ import GlobalVariable from "./globalVariable.js";
 
 const showResult = () =>{
     let userName = GlobalVariable.username;
-    
+    // Capitalize the first letter
+    userName = userName.charAt(0).toUpperCase() + userName.slice(1);
+
                      //to check if user scored above 50%
     if(GlobalVariable.score>= GlobalVariable.questionNo/2){
         
         swal({
-            title: userName.charAt(0).toUpperCase()+"'s Score",
+            title: userName+"'s Score",
             text: "Congratulations,You have scored more than 50%",
             icon: "success",
             button: "Reset",
@@ -22,7 +24,7 @@ const showResult = () =>{
 
         swal(
                 {
-                 title: userName.charAt(0).toUpperCase()+"'s Score",
+                 title: userName+"'s Score",
                  text: "Oops,You have scored less than 50%",
                  icon: "error",
                  button: "Reset",
