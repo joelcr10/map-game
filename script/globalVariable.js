@@ -4,7 +4,7 @@ class GlobalVariable{
     count = 0;
     currentQuestion = "";
     currentAnswer = "";
-    correctAnswer = 0;
+    score = 0;
     uniqueRandom = [];
     map = true;
 
@@ -48,12 +48,12 @@ class GlobalVariable{
         this.currentQuestion = question;
     }
 
-    get correctAnswer(){
-        return this.correctAnswer;
+    get score(){
+        return this.score;
     }
 
-    set correctAnswer(ans){
-        this.correctAnswer = ans;
+    set score(ans){
+        this.score = ans;
     }
 }
 
