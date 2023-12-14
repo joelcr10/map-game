@@ -1,6 +1,6 @@
 import GlobalVariable from "./globalVariable.js";
 
-
+var uniqueRandom = []
 const findRandom = () =>{
    let randomNumber;
    do{
