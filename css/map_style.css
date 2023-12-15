@@ -4,7 +4,8 @@
 body{
   background-color: black;
   color: white;
-  font-family: 'Bebas Neue',
+  font-family: 'Bebas Neue',;
+  overflow-x: hidden;
 }
 
 .container{
@@ -63,5 +64,11 @@ body{
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+#backgroundVideo{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
 }
 
