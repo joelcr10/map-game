@@ -50,7 +50,7 @@ GlobalVariable.questionNo = parseInt(localStorage.getItem("questionNo"));
 GlobalVariable.username = localStorage.getItem("userName");
 
 export const getQuestion = () =>{
-
+    
     disableButton();
     GlobalVariable.map = true;  // To enable the map to click the area 
 
@@ -58,16 +58,19 @@ export const getQuestion = () =>{
 
     document.getElementById("result-prompt").innerText = "";      //To clear the result-prompt before showing correct or wrong
 
+    
+
+    console.log(GlobalVariable.count,GlobalVariable.questionNo)
     if(GlobalVariable.count < GlobalVariable.questionNo){
 
         let randomNumber = findRandom();
-
+        
         GlobalVariable.currentQuestion = questions.get(randomNumber);
         GlobalVariable.currentAnswer = answers.get(randomNumber);
 
         document.getElementById("question-prompt").innerText = GlobalVariable.currentQuestion;
     }
-    GlobalVariable.count = GlobalVariable.count + 1;
+    // GlobalVariable.count = GlobalVariable.count + 1;
 }
 
 
