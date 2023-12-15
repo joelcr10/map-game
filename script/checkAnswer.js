@@ -2,10 +2,18 @@ import GlobalVariable from "./globalVariable.js";
 import showResult from "./showResult.js";
 import { enableButton } from "./buttonFunctions.js";
 
+
+let userAnswerArray=[];
+
 export const checkAnswer = (idName) =>{
+
     if(GlobalVariable.map){
 
         let userAnswer = idName;//identifies the area specified in areas
+
+        userAnswerArray.push(userAnswer);
+        localStorage.setItem('userAnswerArray',userAnswerArray); //storing the user answer array in local storage
+
 
         if(userAnswer == GlobalVariable.currentAnswer){
             document.getElementById("result-prompt").innerText = "Correct";
@@ -23,7 +31,7 @@ export const checkAnswer = (idName) =>{
 
         if(GlobalVariable.count==GlobalVariable.questionNo){
 
-            setTimeout(showResult, 1000);//shows result if question number reaches limit
+            setTimeout(showResult, 500);//shows result if question number reaches limit
 
         }
 

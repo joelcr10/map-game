@@ -12,7 +12,7 @@ export const addBackground = (id) =>{
 
         }else if(id=="Africa"){
 
-            text = "./assets/africa.mp4";
+            text = "./assets/southAmerica.mp4";
 
         }else if(id=="Europe"){
 
@@ -20,7 +20,8 @@ export const addBackground = (id) =>{
 
         }else if(id=="South America.mp4"){
 
-            text = "./assets/southAmerica.mp4";
+            text = "./assets/asia.mp4";
+            
         }else if(id=="North America"){
 
             text = "./assets/northAmerica.mp4";
@@ -35,4 +36,14 @@ export const addBackground = (id) =>{
         document.getElementById("continent-name").style.margin = "auto";
         document.getElementById('continent-name').style.textAlign = "center";
     }
+}
+
+
+export const removeBackground = () =>{
+    document.getElementById("main").style.backgroundImage = "none";
+        
+
+
+        document.getElementById('continent-name').innerText = "";
+       
 }

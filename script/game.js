@@ -49,6 +49,9 @@ GlobalVariable.score = 0;  // Initially the Score will be Zero
 GlobalVariable.questionNo = parseInt(localStorage.getItem("questionNo"));
 GlobalVariable.username = localStorage.getItem("userName");
 
+let randomQuestionArray=[];
+let correctAnswerArray=[];
+
 export const getQuestion = () =>{
     
     disableButton();
@@ -65,8 +68,15 @@ export const getQuestion = () =>{
 
         let randomNumber = findRandom();
         
+        
         GlobalVariable.currentQuestion = questions.get(randomNumber);
         GlobalVariable.currentAnswer = answers.get(randomNumber);
+
+        randomQuestionArray.push(GlobalVariable.currentQuestion); // for storing generated questions
+        correctAnswerArray.push(GlobalVariable.currentAnswer);    // for storing correct answer of generated questions
+
+        localStorage.setItem('randomQuestionArray',randomQuestionArray); //storing the current question info in Local storage
+        localStorage.setItem('correctAnswerArray',correctAnswerArray);   //storing the current answer info in Local storage
 
         document.getElementById("question-prompt").innerText = GlobalVariable.currentQuestion;
     }
