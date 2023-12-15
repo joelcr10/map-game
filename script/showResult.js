@@ -11,43 +11,77 @@ const showResult = () =>{
     let userName = GlobalVariable.username;
     // Capitalize the first letter
     userName = userName.charAt(0).toUpperCase() + userName.slice(1);
-
-    //to check if user scored above 50%
-    if(GlobalVariable.score>= GlobalVariable.questionNo/2){
-
+    localStorage.setItem("score",GlobalVariable.score )
+                     //to check if user scored above 50% 
+    if(GlobalVariable.score >= GlobalVariable.questionNo/2){
 
         //to add firework animation 
         document.getElementById("main").style.backgroundImage =   "url('./assets/pass.gif')";
 
+        
         swal({
-            title: userName+"'s Score",
-            text: "Congratulations,You have scored more than 50%",
+            title: userName + "'s Score",
+            text: "Congratulations, You have scored more than 50%",
             icon: "success",
-            button: "Reset",
-             }
-            )
-        .then(function(){
-            window.location.href = "./index.html";//to redirect to the first page
+            buttons: {
+                reset: {
+                    text: "Reset",
+                    value: "reset",
+                },
+                anotherButton: {
+                    text: "Report",
+                    value: "reportPage",
+                },
+            },
         })
-
-    }
-    else{             //to check if user scored below 50%
-
-        //to add crying animation 
-        document.getElementById("main").style.backgroundImage =   "url('./assets/fail.gif')";
-       
-        swal(
-                {
-                 title: userName+"'s Score",
-                 text: "Oops,You have scored less than 50%",
-                 icon: "error",
-                 button: "Reset",
+            .then(function (value) {
+                switch (value) {
+                    case "reset":
+                        window.location.href = "./index.html";
+                        break;
+                    case "reportPage":
+                        window.open("./report.html", "_blank");
+                        break;
+                    default:
+                        // Handle other cases
+                        break;
                 }
-            )
-        .then(function(){
-                 window.location.href = "./index.html";//to redirect to the first page
-                        }
-             )
+            });
+        
+    }
+    else{   
+                  //to check if user scored below 50%
+        document.getElementById("main").style.backgroundImage =   "url('./assets/fail.gif')";
+        
+             swal({
+                title: userName + "'s Score",
+                text: "Oops,You have scored less than 50%",
+                icon: "error",
+                buttons: {
+                    reset: {
+                        text: "Reset",
+                        value: "reset",
+                    },
+                    anotherButton: {
+                        text: "Report",
+                        value: "reportPage",
+                    },
+                },
+            })
+                .then(function (value) {
+                    switch (value) {
+                        case "reset":
+                            window.location.href = "./index.html";
+                            break;
+                        case "reportPage":
+                            window.open("./report.html", "_blank");
+                            break;
+                        default:
+                            // Handle other cases
+                            break;
+                    }
+                });
+            
 
     }
 }
