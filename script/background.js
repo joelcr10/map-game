@@ -18,10 +18,10 @@ export const addBackground = (id) =>{
 
             text = "./assets/europe.mp4";
 
-        }else if(id=="South America.mp4"){
+        }else if(id=="South America"){
 
-            text = "./assets/asia.mp4";
-            
+            text = "./assets/asia1.mp4";
+
         }else if(id=="North America"){
 
             text = "./assets/northAmerica.mp4";

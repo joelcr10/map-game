@@ -13,7 +13,8 @@ const showResult = () =>{
     // Capitalize the first letter
     userName = userName.charAt(0).toUpperCase() + userName.slice(1);
     localStorage.setItem("score",GlobalVariable.score )
-                     //to check if user scored above 50% 
+
+    //to check if user scored above 50% 
     if(GlobalVariable.score >= GlobalVariable.questionNo/2){
 
         //to add firework animation 
@@ -41,7 +42,7 @@ const showResult = () =>{
                         window.location.href = "./index.html";
                         break;
                     case "reportPage":
-                        window.open("./report.html", "_blank");
+                        window.location.href = "./report.html";
                         break;
                     default:
                         // Handle other cases
@@ -53,6 +54,7 @@ const showResult = () =>{
     else{   
                   //to check if user scored below 50%
         document.getElementById("main").style.backgroundImage =   "url('./assets/fail.gif')";
+        
         
              swal({
                 title: userName + "'s Score",
@@ -75,7 +77,7 @@ const showResult = () =>{
                             window.location.href = "./index.html";
                             break;
                         case "reportPage":
-                            window.open("./report.html", "_blank");
+                            window.location.href = "./report.html";
                             break;
                         default:
                             // Handle other cases

@@ -43,10 +43,12 @@ const printReport = () => {
         
     }
 
-    
-    
+    let resetBtn =document.getElementById("tryagain");
+    resetBtn.onclick = function(){
+        window.location.href = "./index.html";
+    }
 
-  
   }
 
   printReport();
+

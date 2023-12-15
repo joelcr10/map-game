@@ -1,6 +1,5 @@
 
 
-
 const startGame = () =>{
     console.log("pressed start button");
     let inputField = document.getElementById("firstName").value;
