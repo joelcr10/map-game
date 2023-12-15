@@ -50,4 +50,19 @@ p {
     font-size: 30px;
 }
 
+#tryagain{
+    background-color: orangered;
+    height: 30px;
+    margin: auto;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+#tryagain:hover{
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    
+}
 /* Add more styling as needed */

@@ -5,16 +5,10 @@ class GlobalVariable{
     currentQuestion = "";
     currentAnswer = "";
     score = 0;
-    uniqueRandom = [];
+   
     map = true;
 
-    get uniqueRandom(){
-        return this.uniqueRandom; 
-    }
-
-    set uniqueRandom(res){
-        this.uniqueRandom.push(res);
-    }
+    
 
     get count(){
         return this.count;

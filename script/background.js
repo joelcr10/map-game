@@ -4,30 +4,32 @@ export const addBackground = (id) =>{
         let text = "";
         if(id=="Australia"){
 
-            text = "url('./assets/australia.gif')";
+            text = "./assets/australia.mp4";
 
         }else if(id=="Asia"){
 
-            text = "url('./assets/asia.gif')";
+            text = "./assets/asia.mp4";
 
         }else if(id=="Africa"){
 
-            text = "url('./assets/africa1.gif')";
+            text = "./assets/southAmerica.mp4";
 
         }else if(id=="Europe"){
 
-            text = "url('./assets/europe.gif')";
+            text = "./assets/europe.mp4";
 
         }else if(id=="South America"){
 
-            text = "url('./assets/south-ameria.gif')";
+            text = "./assets/asia1.mp4";
+
         }else if(id=="North America"){
 
-            text = "url('./assets/north-america.gif')";
+            text = "./assets/northAmerica.mp4";
         }
-        document.getElementById("main").style.backgroundImage = text;
-        document.getElementById('main').style.backgroundSize="cover";
-
+        
+        document.getElementById('backgroundVideo').setAttribute('src',text);
+        document.getElementById('backgroundVideo').setAttribute('autoplay',true);
+        document.getElementById('backgroundVideo').setAttribute('muted',true);
 
         document.getElementById('continent-name').innerText = id;
         document.getElementById('continent-name').style.color = "white";
