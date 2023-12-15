@@ -28,7 +28,7 @@ export const checkAnswer = (idName) =>{
 
         if(GlobalVariable.count==GlobalVariable.questionNo){
 
-            setTimeout(showResult, 1000);//shows result if question number reaches limit
+            setTimeout(showResult, 500);//shows result if question number reaches limit
 
         }
 

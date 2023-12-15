@@ -15,6 +15,7 @@ const startGame = () =>{
             )
     }else{//
         userName = inputField;//to get the username from user as input
+     
 
         questionNo = parseInt(document.getElementById("number").value);//to get the number of questions the user wants to attempt
 
