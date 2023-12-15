@@ -68,7 +68,7 @@
     <script type="module">
         import {getQuestion} from "./script/game.js";
         import {checkAnswer} from "./script/checkAnswer.js";
-        import {addBackground} from "./script/background.js";
+        import {addBackground, removeBackground} from "./script/background.js";
 
         let areas = document.getElementsByTagName('area');
         console.log(areas);
@@ -80,6 +80,10 @@
 
                 areas[i].onmouseenter = function(){
                     addBackground(event.target.id);
+                }
+
+                areas[i].onmouseleave = function(){
+                    removeBackground();
                 }
         }
 

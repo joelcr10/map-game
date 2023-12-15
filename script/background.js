@@ -35,3 +35,13 @@ export const addBackground = (id) =>{
         document.getElementById('continent-name').style.textAlign = "center";
     }
 }
+
+
+export const removeBackground = () =>{
+    document.getElementById("main").style.backgroundImage = "none";
+        
+
+
+        document.getElementById('continent-name').innerText = "";
+       
+}
