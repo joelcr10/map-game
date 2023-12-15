@@ -14,6 +14,10 @@ const showResult = () =>{
     localStorage.setItem("score",GlobalVariable.score )
                      //to check if user scored above 50% 
     if(GlobalVariable.score >= GlobalVariable.questionNo/2){
+
+        //to add firework animation 
+        document.getElementById("main").style.backgroundImage =   "url('./assets/pass.gif')";
+
         
         swal({
             title: userName + "'s Score",
@@ -45,8 +49,10 @@ const showResult = () =>{
             });
         
     }
-    else{             //to check if user scored below 50%
-
+    else{   
+                  //to check if user scored below 50%
+        document.getElementById("main").style.backgroundImage =   "url('./assets/fail.gif')";
+        
              swal({
                 title: userName + "'s Score",
                 text: "Oops,You have scored less than 50%",
