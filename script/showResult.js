@@ -1,6 +1,13 @@
 import GlobalVariable from "./globalVariable.js";
 
 const showResult = () =>{
+
+    //removing map-container and all its elements
+    document.getElementById('map-container').style.visibility = "hidden";
+    document.getElementById('question-prompt').innerText = "";
+    document.getElementById('result-prompt').innerText = "";
+
+
     let userName = GlobalVariable.username;
     // Capitalize the first letter
     userName = userName.charAt(0).toUpperCase() + userName.slice(1);
