@@ -49,6 +49,7 @@ GlobalVariable.score = 0;  // Initially the Score will be Zero
 GlobalVariable.questionNo = parseInt(localStorage.getItem("questionNo"));
 GlobalVariable.username = localStorage.getItem("userName");
 
+console.log(GlobalVariable.questionNo );
 export const getQuestion = () =>{
 
     disableButton();
@@ -58,7 +59,7 @@ export const getQuestion = () =>{
 
     document.getElementById("result-prompt").innerText = "";      //To clear the result-prompt before showing correct or wrong
 
-    if(GlobalVariable.count < GlobalVariable.questionNo){
+    if(GlobalVariable.count <= GlobalVariable.questionNo){
 
         let randomNumber = findRandom();
 
@@ -67,7 +68,8 @@ export const getQuestion = () =>{
 
         document.getElementById("question-prompt").innerText = GlobalVariable.currentQuestion;
     }
-    GlobalVariable.count = GlobalVariable.count + 1;
+    //GlobalVariable.count = GlobalVariable.count + 1;
+    console.log(GlobalVariable.count);
 }
 
 
