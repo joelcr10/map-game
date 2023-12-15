@@ -12,7 +12,7 @@ const showResult = () =>{
     // Capitalize the first letter
     userName = userName.charAt(0).toUpperCase() + userName.slice(1);
     localStorage.setItem("score",GlobalVariable.score )
-                     //to check if user scored above 50%
+                     //to check if user scored above 50% 
     if(GlobalVariable.score >= GlobalVariable.questionNo/2){
         
         swal({
