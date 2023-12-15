@@ -20,6 +20,10 @@ const startGame = () =>{
 
         localStorage.setItem('userName',userName);
         localStorage.setItem('questionNo',questionNo);
+        localStorage.setItem('randomQuestionArray',[]);
+        localStorage.setItem('correctAnswerArray',[]);
+        localStorage.setItem('userAnswerArray',[]);
+
         
         window.location.href = "./gam.html";//to direct the user to the page where game starts
 
