@@ -67,7 +67,7 @@ export const getQuestion = () =>{
 
         document.getElementById("question-prompt").innerText = GlobalVariable.currentQuestion;
     }
-    GlobalVariable.count = GlobalVariable.count + 1;
+   // GlobalVariable.count = GlobalVariable.count + 1;
 }
 
 

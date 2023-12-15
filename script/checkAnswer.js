@@ -10,6 +10,7 @@ export const checkAnswer = (idName) =>{
         if(userAnswer == GlobalVariable.currentAnswer){
             document.getElementById("result-prompt").innerText = "Correct";
             document.getElementById("result-prompt").style.color = "green";
+            document.getElementById("result-prompt-wrong").innerText =" ";
 
             GlobalVariable.score = GlobalVariable.score+1;
             
@@ -17,7 +18,11 @@ export const checkAnswer = (idName) =>{
         }else{
             document.getElementById("result-prompt").innerText = "Wrong";
             document.getElementById("result-prompt").style.color = "red";
+            document.getElementById("result-prompt-wrong").innerText = "Correct Answer is: "+GlobalVariable.currentAnswer;
+            document.getElementById("result-prompt-wrong").style.color = "green";
+        
         }
+        //document.getElementById("result-prompt-wrong").innerText =" ";
 
         GlobalVariable.count = GlobalVariable.count+1;//go to next question
 
